@@ -1,0 +1,285 @@
+$primary:#1e307e;
+.shopinfo{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .info{
+        width: 85%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .freshfish{
+            width: 30%;
+            height: 100%;
+            position: relative;
+
+            .over{
+                height: 100%;
+                width: 100%;
+                background-color: $primary;
+                position: absolute;
+                top: 0;
+                opacity: 0.5;
+            }
+
+            img{
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+            }
+            .details-rf{
+                position: absolute;
+                width: 100%;
+                height: 40%;
+                top: 50%;
+                left: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 8%;
+
+
+                transform: translate(-50%, -50%);
+
+                .text{
+                    text-align: center;
+                    color: white;
+                    h2{
+                        font-size: 3.3rem;
+                    }
+                }
+                .button{
+
+                    .lineh{
+                        background-color: white;
+                    }
+
+                    button{
+                        background-color: rgba(255, 255, 255, 0.307);
+                        -webkit-backdrop-filter: blur(50%);
+                        backdrop-filter: blur(80%);
+
+
+                    }
+                    &:hover{
+                        button{
+                            background-color: white;
+                        color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .info2{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6%;
+            flex-direction: column;
+
+
+            .add{
+                height: 37%;
+                width: 100%;
+                
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .seafood{
+                height: 57%;
+                width: 100%;
+                position: relative;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+                .over{
+                    height: 100%;
+                    width: 100%;
+                    background-color: $primary;
+                    position: absolute;
+                    top: 0;
+                    opacity: 0.5;
+                }
+                .details-seaf{
+                position: absolute;
+                width: 100%;
+                height: 40%;
+                top: 50%;
+                left: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 8%;
+
+
+                transform: translate(-50%, -50%);
+
+                .text{
+                    text-align: center;
+                    color: white;
+                    h2{
+                        font-size: 4rem;
+                    }
+                }
+                .button{
+
+                    .lineh{
+                        background-color: white;
+                    }
+
+                    button{
+                        background-color: rgba(255, 255, 255, 0.307);
+                        -webkit-backdrop-filter: blur(50%);
+                        backdrop-filter: blur(80%);
+
+
+                    }
+                    &:hover{
+                        button{
+                            background-color: white;
+                        color: $primary;
+                        }
+                    }
+                }
+            }
+            }
+        }
+        .smallfish{
+            width: 30%;
+            height: 100%;
+            position: relative;
+
+            .over{
+                height: 100%;
+                width: 100%;
+                background-color: $primary;
+                position: absolute;
+                top: 0;
+                opacity: 0.5;
+            }
+            
+            
+            
+            img{
+                height: 100%;
+                width: 100%;
+            }
+            .details-sf{
+                position: absolute;
+                width: 100%;
+                height: 40%;
+                top: 50%;
+                left: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 8%;
+
+
+                transform: translate(-50%, -50%);
+
+                .text{
+                    text-align: center;
+                    color: white;
+                    h2{
+                        font-size: 3.3rem;
+                    }
+                }
+                .button{
+
+                    .lineh{
+                        background-color: white;
+                    }
+
+                    button{
+                        background-color: rgba(255, 255, 255, 0.307);
+                        -webkit-backdrop-filter: blur(50%);
+                        backdrop-filter: blur(80%);
+
+
+                    }
+                    &:hover{
+                        button{
+                            background-color: white;
+                        color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1025px){
+    .shopinfo{
+        width: 100%;
+
+        .info{
+            flex-direction: column;
+            width: 100%;
+            gap: 2rem;
+
+            .freshfish, .info2, .smallfish{
+                width: 90%;
+                // height: 80%;
+
+
+            }
+
+            .freshfish{
+                .details-rf{
+                    .text{
+                        h2{
+                            font-size: 10vw;
+                        }
+                        p{
+                            font-size: 3vw;
+                        }
+                    }
+                }
+            }
+            .info2{
+                .seafood{
+                .details-seaf{
+                    .text{
+                        h2{
+                            font-size: 10vw;
+                        }
+                        p{
+                            font-size: 3vw;
+                        }
+                    }
+                }
+            }
+            }
+            .smallfish{
+                .details-sf{
+                    .text{
+                        h2{
+                            font-size: 10vw;
+                        }
+                        p{
+                            font-size: 3vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
