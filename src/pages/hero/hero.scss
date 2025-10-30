@@ -83,7 +83,7 @@ $primary: #1e307e;
     }
 }
 
-@media(max-width:462px){
+@media(max-width:610px){
     .hero{
         flex-direction: column-reverse;
         height: 110vh;
@@ -135,7 +135,7 @@ $primary: #1e307e;
     }
 }
 
-@media (min-width:469px)and (max-width:1024px){
+@media (min-width:610px)and (max-width:1024px){
     .hero{
         // height:70vh;
 
