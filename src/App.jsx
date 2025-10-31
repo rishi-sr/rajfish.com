@@ -6,6 +6,9 @@ import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import Lan from './components/lan/Lan'
 import BackToTop from './components/btp/BackToTop'
+import Seafood from './pages/seafood/Seafood'
+import SmallFish from './pages/smallfish/SmallFish'
+import FreshFish from './pages/freshfish/FreshFish'
 
 function App() {
 
@@ -17,6 +20,9 @@ function App() {
       <BackToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/seafood" element={<Seafood />} />
+          <Route path="/smallfish" element={<SmallFish />} />
+          <Route path="/freshfish" element={<FreshFish />} />
         </Routes>
       <Footer />
       </Router>

@@ -1,0 +1,152 @@
+$primary: #1e307e;
+.freshfish{
+    height: auto;
+    width: 100%;
+
+    .ffbanner{
+        height: 50vh;
+        width: 100%;
+        position: relative;
+
+        .ffoverlay{
+            height: 50%;
+
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .ffbanner-mini{
+            position: absolute;
+            color: white;
+            background-color: $primary;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            h1{
+                font-size: 5rem;
+            }
+            p{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5%;
+                font-size: 1.5rem;
+            }
+
+
+            .minioverlay{
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+    .fishes{
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .fishescards{
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .fishheading{
+                height: 10vh;
+
+                h2{
+                    font-size: 4rem;
+                    color: $primary;
+                }
+            }
+
+            .cards-f{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5%;
+                height: auto;
+                align-items: center;
+                justify-content: center;
+                margin-top: 5%;
+
+                .card-f{
+                    height: 450px;
+                    width: 300px;
+
+                    .fimg{
+                        height: 60%;
+                        width: 100%;
+                        img{
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+                    .fishinfo{
+                        display: flex;
+                        align-items: center;
+                        height: 10%;
+                        justify-content: space-between;
+
+                        h3{
+                            color: $primary;
+                        }
+                        p{
+                            color: $primary;
+
+                        }
+                    }
+                    .addtocart{
+                        button{
+                            border: none;
+                            background-color: #1e307e;
+                            color: white;
+                            font-size: 1.3rem;
+                            padding: 10px 10px;
+                            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.237);
+                        }
+                        .qty-selector{
+                            display: flex;
+                            align-items: center;
+                            gap: 5%;
+
+                            .left{
+                                border-radius: 10px 0 0 10px;
+                            }
+                            .right{
+                                border-radius: 0 10px 10px 0;
+                            }
+                            span{
+                                font-size: 2rem;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
