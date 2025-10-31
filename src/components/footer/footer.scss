@@ -1,0 +1,456 @@
+$primary: #1e307e;
+.footer{
+    height: 80vh;
+    width: 100%;
+    position: relative;
+
+    .fsection{
+        height: 70vh;
+        width: 100%;
+        background-color: rgba(128, 128, 128, 0.104);
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+
+        .f_data{
+            height: 60%;
+            display: flex;
+            justify-content: flex-end;
+
+            .f_head{
+                height: 90%;
+                width: 65%;
+                display: flex;
+                justify-content: space-around;
+                padding: 5%;
+                color: $primary;
+
+                h2{
+                    font-size: 2.4rem;
+                }
+                ul{
+                    list-style: none;
+
+                    a{
+                        text-decoration: none;
+                        color: #1e307ea0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 0.5rem;
+                        font-size: 1.6rem;
+                        font-style: italic;
+
+                        .span{
+                            height: 2px;
+                            width: 20px;
+                            background-color: #1e307ea0;
+                        }
+
+                        &:hover{
+                            color: $primary;
+                        }
+
+
+                    }
+
+                }
+                
+                .openhours{
+                    display: flex;
+                    flex-direction: column;
+
+                    h2{
+                    font-size: 2.4rem;
+                    }
+                    ul{
+                        list-style: none;
+
+                        li{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.5rem;
+                            font-size: 1.4rem;
+                            font-style: italic;
+
+                            .span{
+                            height: 2px;
+                            width: 20px;
+                            background-color: #1e307ea0;
+                        }
+                        }
+                        
+                                                  
+                    }
+                }
+            }
+        }
+        .f_det{
+            height: 30%;
+            width: 90%;
+            display: flex;
+            align-self: center;
+            justify-content: space-evenly;
+            align-items: center;
+            
+            h2{
+                font-size: 2.4rem;
+                color: #1e307e;
+            }
+            p{
+                display: flex;
+                margin-top: 5%;
+                gap: 5%;
+                font-size: 1.3rem;
+                color: #1e307e;
+                align-items: center;
+                justify-content: center;
+
+                .f_ic{
+                    padding: 10px 10px;
+                    background-color: $primary;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                }
+                a{
+                    font-size: 2rem;
+                color: #1e307e;
+                text-decoration: none;
+                }
+            }
+        }
+        hr{
+            width: 95%;
+            background-color: $primary;
+            align-self: center;
+        }
+        .copyright{
+            height: 10%;
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p{
+                font-size: 1.3rem;
+                color: $primary;
+            }
+        }
+    }
+    .f_banner{
+        z-index: 10;
+        height: 52%;
+        background-color: #1e307e;
+        width: 25%;
+        position: absolute;
+        left: 8%;
+        top: 6%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .f_overlay{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .logo-head{
+            height: 30%;
+            width: auto;
+
+            img{
+                height: 100%;
+                
+            }
+        }
+        .f_para{
+            height: 40%;
+            width: 90%;
+
+            p{
+                font-size: 1.6rem;
+                color: white;
+                text-align: center;
+            }
+        }
+        .f_social{
+            width: 90%;
+            height: 20%;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            
+            .f_icon{
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+                z-index: 20;
+                
+                a{
+                    text-decoration: none;
+                    color: $primary;
+                    padding: 15px 15px;
+                    background-color: aliceblue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    
+                }
+
+                &:hover{
+                    transform: scale(0.8);
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width:610px){
+    .footer{
+        
+        
+        .fsection{
+            background-color: transparent;
+            .f_data{
+
+                margin-top: 60%;
+                height: auto;
+
+                .f_head{
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 90%;
+                    gap: 30px;
+
+                    
+                    h2{
+                        font-size: 1.6rem;
+                    }
+                    ul{
+                        a{
+                            font-size: 1.2rem;
+
+                            .span{
+                                width: 10px;
+                            }
+                        }
+                    }
+
+                    .openhours{
+
+                        h2{
+                            font-size: 1.6rem;
+                        }
+                        ul{
+                            li{
+                                font-size: 1.2rem;
+
+                                .span{
+                                    width: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+            .f_det{
+                flex-direction: column;
+                height: auto;
+                width: 70%;
+                align-items: flex-start;
+                gap: 30px;
+                margin-top: 30px;
+                margin-bottom: 5%;
+                .shopadd, .email, .contact{
+                    width: 90%;
+
+                    
+                }
+                h2{
+                    font-size: 1.6rem;
+
+                }
+                p{
+                    font-size: 1rem;
+                    width: 100%;
+                    justify-content: flex-start;
+
+                }
+            }
+            .copyright{
+                height: auto;
+                padding: 10px 0px;
+                p{
+                    font-size: 1rem;
+                }
+            }
+
+        }
+        .f_banner{
+            width: 85%;
+            height: 40%;
+
+            .f_para{
+                p{
+
+
+                    font-size: 1.2rem;
+
+                    .numa{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:612px) and (max-width:769px) {
+    .footer{
+        height: 60vh;
+
+        .f_banner{
+            height: 40%;
+            width: 30%;
+            .f_para{
+                p{
+                    font-size: 1rem;
+                }
+            }
+
+            .f_social{
+                .f_icon{
+                    a{
+                        padding: 10px 10px;
+                    }
+                }
+            }
+
+        }
+        .fsection{
+            height: 50vh;
+            .f_data{
+                .f_head{
+                
+                    .quicklinks1{
+                        h2{
+                            font-size: 1.5rem;
+                        }
+                        ul{
+                            a{
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                
+                    .openhours{
+                    
+                        h2{
+                            font-size: 1.5rem;
+                        }
+                        ul{
+                            li{
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .f_det{
+                h2{
+                    font-size: 1.6rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:2000px) and (max-width:2561px){
+    .footer{
+    
+        .f_banner{
+            .f_para{
+                p{
+                    font-size: 3.4rem;
+                }
+            }
+    
+            .f_social{
+                .f_icon{
+                    a{
+                        padding: 30px 30px;
+                        font-size: 3rem;
+                    }
+                }
+            }
+    
+        }
+        .fsection{
+            .f_data{
+                .f_head{
+                
+                    .quicklinks1{
+                        h2{
+                            font-size: 5rem;
+                        }
+                        ul{
+                            a{
+                                font-size: 3rem;
+                            }
+                        }
+                    }
+                
+                    .openhours{
+                    
+                        h2{
+                            font-size: 5rem;
+                        }
+                        ul{
+                            li{
+                                font-size: 3rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .f_det{
+                h2{
+                    font-size: 5rem;
+                }
+                p{
+                    font-size: 2rem;
+                }
+            }
+            .copyright{
+                p{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+}

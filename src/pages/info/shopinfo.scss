@@ -60,7 +60,10 @@ $primary:#1e307e;
                         background-color: white;
                     }
 
-                    button{
+                                        a{
+                        text-decoration: none;
+
+                        button{
                         background-color: rgba(255, 255, 255, 0.307);
                         -webkit-backdrop-filter: blur(50%);
                         backdrop-filter: blur(80%);
@@ -72,6 +75,7 @@ $primary:#1e307e;
                             background-color: white;
                         color: $primary;
                         }
+                    }
                     }
                 }
             }
@@ -142,7 +146,10 @@ $primary:#1e307e;
                         background-color: white;
                     }
 
-                    button{
+                                        a{
+                        text-decoration: none;
+
+                        button{
                         background-color: rgba(255, 255, 255, 0.307);
                         -webkit-backdrop-filter: blur(50%);
                         backdrop-filter: blur(80%);
@@ -154,6 +161,7 @@ $primary:#1e307e;
                             background-color: white;
                         color: $primary;
                         }
+                    }
                     }
                 }
             }
@@ -207,7 +215,11 @@ $primary:#1e307e;
                         background-color: white;
                     }
 
-                    button{
+
+                    a{
+                        text-decoration: none;
+
+                        button{
                         background-color: rgba(255, 255, 255, 0.307);
                         -webkit-backdrop-filter: blur(50%);
                         backdrop-filter: blur(80%);
@@ -220,6 +232,7 @@ $primary:#1e307e;
                         color: $primary;
                         }
                     }
+                    }
                 }
             }
         }
@@ -229,6 +242,7 @@ $primary:#1e307e;
 @media(max-width:1025px){
     .shopinfo{
         width: 100%;
+        height: auto;
 
         .info{
             flex-direction: column;

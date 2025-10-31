@@ -1,5 +1,6 @@
 import React from 'react'
 import './shopinfo.scss'
+import { Link } from 'react-router-dom'
 
 const Shopinfo = () => {
   return (
@@ -17,7 +18,7 @@ const Shopinfo = () => {
 
                     <div className="button">
                         <div className="lineh"></div>
-                        <button>Explore Fresh Fish</button>
+                        <Link to="/freshfish"><button>Explore Fresh Fish</button></Link>
                     </div>
                 </div>
             </div>
@@ -41,7 +42,7 @@ const Shopinfo = () => {
 
                     <div className="button">
                         <div className="lineh"></div>
-                        <button>Explore Sea Food</button>
+                        <Link to="/seafood"><button>Explore Sea Food</button></Link>
                     </div>
                 </div>
                 </div>
@@ -60,7 +61,7 @@ const Shopinfo = () => {
 
                     <div className="button">
                         <div className="lineh"></div>
-                        <button>Explore Small Fish</button>
+                        <Link to="/smallfish"><button>Explore Small Fish</button></Link>
                     </div>
                 </div>
             </div>
