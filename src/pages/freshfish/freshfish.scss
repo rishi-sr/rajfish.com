@@ -150,3 +150,173 @@ $primary: #1e307e;
         }
     }
 }
+
+@media (max-width:611px){
+    .freshfish{
+
+        .ffbanner{
+
+            .ffbanner-mini{
+                height: 50%;
+                width: 80%;
+                h1{
+                    font-size: 3rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+        .fishes{
+
+            .fishescards{
+                width: 90%;
+
+                .fishheading{
+                    height: auto;
+                    h2{
+                        font-size: 3rem;
+                        text-align: center;
+                    }
+                }
+
+                .cards-f{
+
+                    .card-f{
+                        width: 45%;
+                        height: 70vw;
+
+                        .fishinfo{
+
+                            h3{
+                                font-size: 1rem;
+                            }
+                            p{
+                                font-size: 1rem;
+                            }
+                        }
+
+                        .addtocart{
+                            button{
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:376px){
+    .freshfish{
+
+        .ffbanner{
+
+            .ffbanner-mini{
+                height: 50%;
+                width: 80%;
+                h1{
+                    font-size: 3rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+        .fishes{
+
+            .fishescards{
+                width: 90%;
+
+                .fishheading{
+                    height: auto;
+                    h2{
+                        font-size: 3rem;
+                        text-align: center;
+                    }
+                }
+
+                .cards-f{
+
+                    .card-f{
+                        width: 85%;
+                        height: 90vw;
+
+                        .fishinfo{
+
+                            h3{
+                                font-size: 1rem;
+                            }
+                            p{
+                                font-size: 1rem;
+                            }
+                        }
+
+                        .addtocart{
+                            button{
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 2100px) {
+    .freshfish{
+
+        .ffbanner{
+
+            .ffbanner-mini{
+                height: 50%;
+                // width: 0%;
+                h1{
+                    font-size: 8rem;
+                }
+                p{
+                    font-size: 3rem;
+                }
+            }
+        }
+        .fishes{
+
+            .fishescards{
+                width: 90%;
+
+                .fishheading{
+                    height: auto;
+                    h2{
+                        font-size: 7rem;
+                        text-align: center;
+                    }
+                }
+
+                .cards-f{
+
+                    .card-f{
+                        height: 40vw;
+
+                        .fishinfo{
+
+                            h3{
+                                font-size: 4rem;
+                            }
+                            p{
+                                font-size: 3rem;
+                            }
+                        }
+
+                        .addtocart{
+                            button{
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
