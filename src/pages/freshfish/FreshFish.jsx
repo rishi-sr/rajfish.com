@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './freshfish.scss';
 import { MdArrowForwardIos } from "react-icons/md";
+import { useCart } from '../../context/CartContext';
 
 const freshfish = [
   { name: "Rehu Jinda", price: 250, url: "rehu-jinda.jpg" },
@@ -23,38 +24,12 @@ const freshfish = [
 
 
 const FreshFish = () => {
-  const [quantities, setQuantities] = useState(freshfish.map(() => 0));
-  const [cart, setCart] = useState([]);
-
-  const increment = (index) => {
-    const newQty = [...quantities];
-    newQty[index] += 1;
-    setQuantities(newQty);
-  };
-
-  const decrement = (index) => {
-    const newQty = [...quantities];
-    if (newQty[index] > 0) {
-      newQty[index] -= 1;
-      setQuantities(newQty);
-    }
-  };
-
-  useEffect(() => {
-    const updatedCart = freshfish
-      .map((item, index) => ({
-        ...item,
-        quantity: quantities[index],
-        total: item.price * quantities[index],
-      }))
-      .filter(item => item.quantity > 0);
+  const { addToCart, removeFromCart, cart, CartOpen, setCartOpen } = useCart();
     
-    setCart(updatedCart);
-  }, [quantities]);
-
-  useEffect(() => {
-    console.log("🛒 Cart updated:", cart);
-  }, [cart]);
+  const getQuantity = (itemName) => {
+    const found = cart.find(i => i.name === itemName);
+    return found ? found.quantity : 0;
+  };
 
   return (
     <div className="freshfish">
@@ -78,29 +53,35 @@ const FreshFish = () => {
           </div>
 
           <div className="cards-f">
-            {freshfish.map((item, index) => (
-              <div className="card-f" key={index}>
-                <div className="fimg">
-                  <img src="smallfish.jpg" alt={item.name} />
-                </div>
-                <div className="fishinfo">
-                  <h3>{item.name}</h3>
-                  <p>Rs. {item.price}/- KG</p>
-                </div>
+            {freshfish.map((item, index) => {
+              const qty = getQuantity(item.name);
+              return (
+                <div className="card-f" key={index}>
+                  <div className="fimg">
+                    <img src={item.url} alt={item.name} />
+                  </div>
+                  <div className="fishinfo">
+                    <h3>{item.name}</h3>
+                    <p>Rs. {item.price}/- KG</p>
+                  </div>
 
-                <div className="addtocart">
-                  {quantities[index] === 0 ? (
-                    <button onClick={() => increment(index)}>Add to Cart</button>
-                  ) : (
-                    <div className="qty-selector">
-                      <button onClick={() => decrement(index)} className='left'>-</button>
-                      <span>{quantities[index]}</span>
-                      <button onClick={() => increment(index)} className='right'>+</button>
-                    </div>
-                  )}
+                  <div className="addtocart">
+                    {qty === 0 ? (
+                      <button onClick={() => addToCart(item)}>Add to Cart</button>
+                    ) : (
+                      <>
+                      <div className="qty-selector">
+                        <button onClick={() => removeFromCart(item)} className='left'>-</button>
+                        <span>{qty}</span>
+                        <button onClick={() => addToCart(item)} className='right'>+</button>
+                      </div>
+                      <div className='view'><button onClick={()=>setCartOpen(!CartOpen)}> View Cart</button></div>
+                      </>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

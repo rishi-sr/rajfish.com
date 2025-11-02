@@ -117,6 +117,8 @@ $primary: #1e307e;
                         }
                     }
                     .addtocart{
+                        display: flex;
+                        justify-content: space-between;
                         button{
                             border: none;
                             background-color: #1e307e;
@@ -142,7 +144,11 @@ $primary: #1e307e;
                                 align-items: center;
                                 justify-content: center;
                             }
+
+
                         }
+
+
                     }
                 }
 

@@ -9,11 +9,13 @@ import BackToTop from './components/btp/BackToTop'
 import Seafood from './pages/seafood/Seafood'
 import SmallFish from './pages/smallfish/SmallFish'
 import FreshFish from './pages/freshfish/FreshFish'
+import { CartProvider } from './context/CartContext';
 
 function App() {
 
   return (
     <>
+      <CartProvider>
       <Router>
       <Navbar />
       <Lan/>
@@ -26,6 +28,7 @@ function App() {
         </Routes>
       <Footer />
       </Router>
+      </CartProvider>
     </>
   )
 }

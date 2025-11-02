@@ -91,7 +91,7 @@ $primary: #1e307e;
 
                 .card-f{
                     height: 450px;
-                    width: 300px;
+                    width: 30%;
 
                     .fimg{
                         height: 60%;
@@ -117,6 +117,8 @@ $primary: #1e307e;
                         }
                     }
                     .addtocart{
+                        display: flex;
+                        justify-content: space-between;
                         button{
                             border: none;
                             background-color: #1e307e;
@@ -151,7 +153,7 @@ $primary: #1e307e;
     }
 }
 
-@media (max-width:611px){
+@media (max-width:769px){
     .freshfish{
 
         .ffbanner{
@@ -160,7 +162,7 @@ $primary: #1e307e;
                 height: 50%;
                 width: 80%;
                 h1{
-                    font-size: 3rem;
+                    font-size: 4rem;
                 }
                 p{
                     font-size: 1rem;
@@ -189,7 +191,7 @@ $primary: #1e307e;
                         .fishinfo{
 
                             h3{
-                                font-size: 1rem;
+                                font-size: 1.3rem;
                             }
                             p{
                                 font-size: 1rem;
@@ -208,7 +210,7 @@ $primary: #1e307e;
     }
 }
 
-@media (max-width:376px){
+@media (max-width:611px){
     .freshfish{
 
         .ffbanner{
@@ -232,7 +234,7 @@ $primary: #1e307e;
                 .fishheading{
                     height: auto;
                     h2{
-                        font-size: 3rem;
+                        font-size: 2.5rem;
                         text-align: center;
                     }
                 }
@@ -302,10 +304,10 @@ $primary: #1e307e;
                         .fishinfo{
 
                             h3{
-                                font-size: 4rem;
+                                font-size: 3rem;
                             }
                             p{
-                                font-size: 3rem;
+                                font-size: 2.5rem;
                             }
                         }
 

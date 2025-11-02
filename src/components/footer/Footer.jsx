@@ -42,15 +42,15 @@ const Footer = () => {
           <div className="f_det">
             <div className="shopadd">
               <h2>Shop Address</h2>
-              <p><div className="f_ic"><GrLocationPin /></div>Patna, Bihar, India</p>
+              <p><span className="f_ic"><GrLocationPin /></span>Patna, Bihar, India</p>
             </div>
             <div className="email">
               <h2>Email Address</h2>
-              <p><div className="f_ic"><MdEmail /></div>XXXXXXXXXXXXX</p>
+              <p><span className="f_ic"><MdEmail /></span>XXXXXXXXXXXXX</p>
             </div>
             <div className="contact">
               <h2>Contact Number</h2>
-              <p><div className="f_ic"><MdAddCall /></div>
+              <p><span className="f_ic"><MdAddCall /></span>
               92419 19193</p>
             </div>
           </div>

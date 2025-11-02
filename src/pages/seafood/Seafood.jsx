@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './seafood.scss';
 import { MdArrowForwardIos } from "react-icons/md";
+import { useCart } from '../../context/CartContext';
 
 const seafood = [
   { name: "Hilsa (500 GM Size)", price: 1300, url: "hilsa.jpg" },
@@ -26,91 +27,60 @@ const seafood = [
 
 
 const Seafood = () => {
-  const [quantities, setQuantities] = useState(seafood.map(() => 0));
-  const [cart, setCart] = useState([]);
+  const { addToCart, removeFromCart, cart, CartOpen, setCartOpen } = useCart();
 
-  const increment = (index) => {
-    const newQty = [...quantities];
-    newQty[index] += 1;
-    setQuantities(newQty);
+  const getQuantity = (itemName) => {
+    const found = cart.find(i => i.name === itemName);
+    return found ? found.quantity : 0;
   };
-
-  const decrement = (index) => {
-    const newQty = [...quantities];
-    if (newQty[index] > 0) {
-      newQty[index] -= 1;
-      setQuantities(newQty);
-    }
-  };
-
-  // 🧠 Auto-update cart when quantities change
-  useEffect(() => {
-    const updatedCart = seafood
-      .map((item, index) => ({
-        ...item,
-        quantity: quantities[index],
-        total: item.price * quantities[index],
-      }))
-      .filter(item => item.quantity > 0);
-    
-    setCart(updatedCart);
-  }, [quantities]);
-
-  // 👀 Optional: View cart in console for testing
-  useEffect(() => {
-    console.log("🛒 Cart updated:", cart);
-  }, [cart]);
 
   return (
     <div className="seafood">
       <div className="seabanner">
-        <div className="seaoverlay">
-          <img src="overlay.png" alt="" />
-        </div>
+        <div className="seaoverlay"><img src="overlay.png" alt="" /></div>
         <div className="seabanner-mini">
           <h1>Sea Food</h1>
           <p>Home <MdArrowForwardIos /> Seafood</p>
-          <div className="minioverlay">
-            <img src="overlay.png" alt="" />
-          </div>
         </div>
       </div>
 
       <div className="fishes">
         <div className="fishescards">
-          <div className="fishheading">
-            <h2>Explore The Best Sea Food</h2>
-          </div>
+          <div className="fishheading"><h2>Explore The Best Sea Food</h2></div>
 
           <div className="cards-f">
-            {seafood.map((item, index) => (
-              <div className="card-f" key={index}>
-                <div className="fimg">
-                  <img src="smallfish.jpg" alt={item.name} />
-                </div>
-                <div className="fishinfo">
-                  <h3>{item.name}</h3>
-                  <p>Rs. {item.price}/- KG</p>
-                </div>
+            {seafood.map((item, index) => {
+              const qty = getQuantity(item.name);
+              return (
+                <div className="card-f" key={index}>
+                  <div className="fimg">
+                    <img src={item.url} alt={item.name} />
+                  </div>
+                  <div className="fishinfo">
+                    <h3>{item.name}</h3>
+                    <p>Rs. {item.price}/- KG</p>
+                  </div>
 
-                <div className="addtocart">
-                  {quantities[index] === 0 ? (
-                    <button onClick={() => increment(index)}>Add to Cart</button>
-                  ) : (
-                    <div className="qty-selector">
-                      <button onClick={() => decrement(index)} className='left'>-</button>
-                      <span>{quantities[index]}</span>
-                      <button onClick={() => increment(index)} className='right'>+</button>
-                    </div>
-                  )}
+                  <div className="addtocart">
+                    {qty === 0 ? (
+                      <button onClick={() => addToCart(item)}>Add to Cart</button>
+                    ) : (
+                      <>
+                      <div className="qty-selector">
+                        <button onClick={() => removeFromCart(item)} className='left'>-</button>
+                        <span>{qty}</span>
+                        <button onClick={() => addToCart(item)} className='right'>+</button>
+                      </div>
+                      <div className='view'><button onClick={()=>setCartOpen(!CartOpen)}> View Cart</button></div>
+                      </>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 };
