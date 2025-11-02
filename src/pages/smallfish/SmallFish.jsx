@@ -9,13 +9,13 @@ const smallfish = [
   { name: "Bachwa", price: 300, url: "bachwa.jpg" },
   { name: "Baspata", price: 800, url: "baspata.jpg" },
   { name: "Chelwa (3 Inch)", price: 280, url: "chelwa.jpg" },
-  { name: "Gainchi", price: 900, url: "gainchi.jpg" },
-  { name: "Tengra (Big Size)", price: 600, url: "tengra-big.jpg" },
+  { name: "Gainchi", price: 900, url: "gainchi.jpeg" },
+  { name: "Tengra (Big Size)", price: 600, url: "tengra-big.webp" },
   { name: "Singhi", price: 800, url: "singhi.jpg" },
   { name: "Bata", price: 200, url: "bata.jpg" },
   { name: "Baami", price: 300, url: "baami.jpg" },
   { name: "Bhola", price: 200, url: "bhola.jpg" },
-  { name: "Palwa", price: 600, url: "palwa.jpg" },
+  { name: "Palwa", price: 600, url: "palwa.jpeg" },
 ];
 
 

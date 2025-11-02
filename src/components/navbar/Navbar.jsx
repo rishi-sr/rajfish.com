@@ -6,13 +6,14 @@ import { IoMdCart } from "react-icons/io";
 import { useCart } from '../../context/CartContext';
 import { ImEyeBlocked } from "react-icons/im";
 import { RxCross1 } from "react-icons/rx";
+import { GiFullWoodBucketHandle } from "react-icons/gi";
 
 const whatsappNumber = "919241919193";
 
 const Navbar = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const { cart, clearCart, CartOpen, setCartOpen } = useCart();
+  const { cart, clearCart, CartOpen, setCartOpen, removeFromCart } = useCart();
 
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
   const totalAmount = cart.reduce((sum, item) => sum + item.total, 0);
@@ -35,7 +36,6 @@ const Navbar = () => {
     setcartOpen(false);
   };
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -76,7 +76,7 @@ const Navbar = () => {
                 </li>
               </Link>
 
-              <li onClick={() => setcartOpen(!cartOpen)}>
+              <li onClick={() => setCartOpen(!CartOpen)}>
                 <div className="uline"></div>
                 <span className="cart">
                   <IoMdCart /> Cart
@@ -177,9 +177,12 @@ const Navbar = () => {
               <ul className="cart-items">
                 {cart.map((item, index) => (
                   <li key={index}>
-                    <span>{item.name}</span>
-                    <span>{item.quantity} x Rs.{item.price}</span>
-                    <span>= Rs.{item.total}</span>
+                    <div className="span">
+                      <span>{item.name}</span>
+                      <span>{item.quantity} x Rs.{item.price}</span>
+                      <span>= Rs.{item.total}</span>
+                    </div>
+                    <div className="removebtn" onClick={()=>removeFromCart(item)}><GiFullWoodBucketHandle /></div>
                   </li>
                 ))}
               </ul>

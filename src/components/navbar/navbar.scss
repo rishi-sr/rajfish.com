@@ -477,7 +477,7 @@ $primary: #1e307e;
   position: absolute;
   background-color: white;
   top: 0;
-  z-index: 1000;
+  z-index: 10000;
   right: 0;
   position: fixed;
   right: -30%;
@@ -500,6 +500,7 @@ $primary: #1e307e;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
 
 
     .cross{
@@ -548,10 +549,17 @@ $primary: #1e307e;
         color: $primary;
         height:10%;
         align-items: center;
+        justify-content: space-between;
+        width: 100%;
         padding: 0 10px;
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.174);
         span{
           font-size: 1rem;
+        }
+
+        .removebtn{
+          color: red;
+          cursor: pointer;
         }
       }
     }
@@ -579,7 +587,7 @@ $primary: #1e307e;
   }
 }
 
-@media (max-width:468px){
+@media (max-width:610px){
   .nav{
 
     .navbar{
@@ -631,10 +639,29 @@ $primary: #1e307e;
   .addtocarts{
     width: 100%;
     right: 100vh;
+    z-index: 10000;
+
+    .cartmain{
+
+      .cross{
+        font-size: 1rem;
+        top: 3%;
+        left: 5%;
+      }
+
+      .cart-items{
+        li{
+          span{
+            font-size: 0.7rem;
+          }
+
+        }
+      }
+    }
   }
 }
 
-@media (min-width:468px) and (max-width:1024px) {
+@media (min-width:611px) and (max-width:1024px) {
   .nav{
 
     .navbar{
@@ -707,6 +734,11 @@ $primary: #1e307e;
       }
     }
   }
+
+  .addtocarts{
+    width: 50%;
+    right: -100vh;
+  }
 }
 
 @media (min-width:2000px) and (max-width:2561px){
@@ -764,6 +796,25 @@ $primary: #1e307e;
         
       }
       
+    }
+
+    .addtocarts{
+      .cartmain{
+
+        .cart-items{
+
+          li{
+
+            span{
+              font-size: 1.5rem;
+            }
+
+            .removebtn{
+              font-size: 2rem;
+            }
+          }
+        }
+      }
     }
     
 }
