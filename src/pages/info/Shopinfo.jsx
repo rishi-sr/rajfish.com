@@ -1,6 +1,8 @@
 import React from 'react'
 import './shopinfo.scss'
 import { Link } from 'react-router-dom'
+import { GrLocationPin } from "react-icons/gr";
+import { IoMdCall } from "react-icons/io";
 
 const Shopinfo = () => {
   return (
@@ -28,6 +30,11 @@ const Shopinfo = () => {
             <div className="info2">
                 <div className="add">
                    <img src="overlay.png" alt="" />
+
+                   <div className="info-add">
+                    <span className="ic"><GrLocationPin /> <p>Patna, Bihar</p></span>
+                    <span className="ic"><IoMdCall /><p>+91 92419 19193</p></span>
+                   </div>
                 </div>
 
 
@@ -36,7 +43,7 @@ const Shopinfo = () => {
                     <div className="over"></div>
                 <div className="details-seaf">
                     <div className="text">
-                        <h2>    SEA FOOD</h2>
+                        <h2>SEA FOOD</h2>
                         <p>Straight from the Sea, Just for You.</p>
                     </div>
 

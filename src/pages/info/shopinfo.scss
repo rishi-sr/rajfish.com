@@ -94,10 +94,34 @@ $primary:#1e307e;
             .add{
                 height: 37%;
                 width: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 
                 img{
                     height: 100%;
                     width: 100%;
+                    position: absolute;
+                }
+
+                .info-add{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 90%;
+                    gap: 10%;
+                    height: 100%;
+                    .ic{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5%;
+                        width: 100%;
+                        font-size: 2rem;
+                        color: #1e307e;
+                    }
                 }
             }
 
@@ -269,7 +293,9 @@ $primary:#1e307e;
                 }
             }
             .info2{
+                gap: 10%;
                 .seafood{
+                    margin-top: 2rem;
                 .details-seaf{
                     .text{
                         h2{
@@ -280,7 +306,11 @@ $primary:#1e307e;
                         }
                     }
                 }
-            }
+                }
+
+                .add{
+                    height: 14rem;
+                }
             }
             .smallfish{
                 .details-sf{
