@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Shopinfo = () => {
   return (
    <>
-   <div className="shopinfo">
+   <div className="shopinfo" id='explore'>
         <div className="info">
             <div className="freshfish">
                 <img src="riverfish.jpg" alt="" />

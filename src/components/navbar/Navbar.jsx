@@ -45,7 +45,9 @@ const Navbar = () => {
           {/* logo */}
           <div className="logo">
             <div className="img">
-              <img src="logo.png" alt="Logo" />
+              <Link to="/">
+                <img src="logo.png" alt="Logo" />
+              </Link>
             </div>
           </div>
 
@@ -178,11 +180,20 @@ const Navbar = () => {
                 {cart.map((item, index) => (
                   <li key={index}>
                     <div className="span">
-                      <span>{item.name}</span>
-                      <span>{item.quantity} x Rs.{item.price}</span>
-                      <span>= Rs.{item.total}</span>
-                    </div>
+                      <div className="img">
+                        <img src={item.url} alt={item.name} />
+                      </div>
+                      <div className="it-info">
+                        <div className="det-it">
+                        <span>{item.name}</span>
+                      </div>
+                        <div className="it-pr">
+                          <span>{item.quantity} x Rs.{item.price}</span>
+                          <span> = Rs.{item.total}</span>
+                        </div>
+                      </div>
                     <div className="removebtn" onClick={()=>removeFromCart(item)}><GiFullWoodBucketHandle /></div>
+                    </div>
                   </li>
                 ))}
               </ul>

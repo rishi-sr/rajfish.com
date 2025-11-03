@@ -1,6 +1,7 @@
 import React from 'react'
 import './hero.scss'
 import { MdExplore } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -26,7 +27,7 @@ const Hero = () => {
             </div>
             <div className="button">
                 <div className="lineh"></div>
-                <button><MdExplore /> Explore</button>
+                <a href="#explore"><button><MdExplore /> Explore</button></a>
             </div>
         </div>
     </div>

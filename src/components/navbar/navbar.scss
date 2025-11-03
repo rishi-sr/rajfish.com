@@ -540,6 +540,7 @@ $primary: #1e307e;
       justify-content: flex-start;
       flex-direction: column;
       gap: 3%;
+      overflow-y: scroll;
 
       li{
         list-style: none;
@@ -547,20 +548,57 @@ $primary: #1e307e;
         gap: 0.3rem;
         background-color: white;
         color: $primary;
-        height:10%;
+        min-height:20%;
         align-items: center;
         justify-content: space-between;
         width: 100%;
         padding: 0 10px;
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.174);
-        span{
-          font-size: 1rem;
+        
+        .span{
+          height: 90%;
+          width: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .img{
+            height: 100%;
+            width: 30%;
+
+            img{
+              height: 100%;
+              width: 100%;
+            }
+          }
+
+          .it-info{
+            width: 65%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10%;
+
+            .det-it{
+              width: 90%;
+              font-size: 1.3rem;
+            }
+            .it-pr{
+              width: 90%;
+              font-size: 1rem;
+            }
+          }
+          .removebtn{
+            color: red;
+            cursor: pointer;
+            width: 5%;
+            font-size: 1.3rem;
+
+          }
         }
 
-        .removebtn{
-          color: red;
-          cursor: pointer;
-        }
       }
     }
 
@@ -652,7 +690,7 @@ $primary: #1e307e;
       .cart-items{
         li{
           span{
-            font-size: 0.7rem;
+            font-size: 1rem;
           }
 
         }

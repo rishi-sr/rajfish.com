@@ -10,7 +10,7 @@ const card=[
 const Category = () => {
   return (
     <>
-    <div className="category">
+    <div className="category" id='cat'>
       <div className="cat-part">
         <div className="heading">
           <h1>WE OFFER THE BEST FOR YOU</h1>
