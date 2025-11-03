@@ -11,6 +11,9 @@ const social=[
   {url:"", src: <FaWhatsapp />}
 ]
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className='footer'>
 
@@ -22,11 +25,11 @@ const Footer = () => {
               <div className="quicklinks1">
                 <h2>Quick Links</h2>
                 <ul>
-                  <Link to="/"><div className="span"></div><li>Menu</li></Link>
-                  <Link to="/seafood"><div className="span"></div><li>Seafood</li></Link>
-                  <Link to="/freshfish"><div className="span"></div><li>Fresh Fish</li></Link>
-                  <Link to="/smallfish"><div className="span"></div><li>Small Fish</li></Link>
-                  <Link to="/Contact"><div className="span"></div><li>Contact</li></Link>
+                  <Link to="/"  onClick={scrollToTop}><div className="span"></div><li>Menu</li></Link>
+                  <Link to="/seafood" onClick={scrollToTop}><div className="span"></div><li>Seafood</li></Link>
+                  <Link to="/freshfish" onClick={scrollToTop}><div className="span"></div><li>Fresh Fish</li></Link>
+                  <Link to="/smallfish" onClick={scrollToTop}><div className="span"></div><li>Small Fish</li></Link>
+                  <Link to="/Contact" onClick={scrollToTop}><div className="span"></div><li>Contact</li></Link>
                 </ul>
               </div>
 
